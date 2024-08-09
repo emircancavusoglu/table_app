@@ -4,11 +4,15 @@ import 'package:equatable/equatable.dart';
 
 }
 class DraggableContainerAdd extends DraggableContainerEvent{
-//eventi takip etmek için
  DraggableContainerAdd();
 
 }
 class DraggableContainerDelete extends DraggableContainerEvent{
   final int id;
   DraggableContainerDelete(this.id);
+}
+class DraggableContainerSwap extends DraggableContainerEvent{
+  final int fromIndex;
+  final int toIndex;
+  DraggableContainerSwap(this.fromIndex, this.toIndex);
 }

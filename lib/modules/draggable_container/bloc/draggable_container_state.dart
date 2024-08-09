@@ -1,5 +1,4 @@
 import 'package:equatable/equatable.dart';
-import '../../../utils/helper/randomNumber.dart';
 import '../model/draggable_container_model.dart';
 
 class DraggableContainerState extends Equatable{

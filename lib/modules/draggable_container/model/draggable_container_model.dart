@@ -1,15 +1,24 @@
-import 'dart:math';
 import 'dart:ui';
-import 'package:equatable/equatable.dart';
 
-class DraggableContainerModel extends Equatable{
+class DraggableContainerModel {
   final int id;
-  final double height;
   final String label;
   final Color color;
+  final int index;
 
-  const DraggableContainerModel(this.id,  this.label, this.color, {this.height = 100});
+  DraggableContainerModel(this.id, this.label, this.color, this.index);
 
-  @override
-  List<Object?> get props => [id, label, color, height];
+  DraggableContainerModel copyWith({
+    int? id,
+    String? label,
+    Color? color,
+    int? index,
+  }) {
+    return DraggableContainerModel(
+      id ?? this.id,
+      label ?? this.label,
+      color ?? this.color,
+      index ?? this.index,
+    );
+  }
 }
